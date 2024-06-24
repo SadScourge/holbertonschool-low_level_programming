@@ -18,6 +18,6 @@ void print_line(int n)
 		{
 			_putchar(98);
 		}
-		_purchar('\n');
+		_putchar('\n');
 	}
 }
