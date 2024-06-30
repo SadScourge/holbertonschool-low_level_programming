@@ -4,7 +4,7 @@
  *_strcpy - copy the string in src to dest
  *@src: the original string
  *@dest: the copied string
- *return: the pointer to dest
+ *Return: the pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
