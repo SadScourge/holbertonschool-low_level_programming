@@ -18,6 +18,6 @@ char *_memset(char *s, char b, unsigned int n)
 		s++;
 		index++;
 	}
-	s = s;
-	return (start);
+	s = start;
+	return (s);
 }
