@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- *
- * 
- * 
+ *_strpbrk - search a string for any set of bytes
+ *@s: string to analyze
+ *@accept: list of char to find
+ *Return: pointer to bytes that matches or null if none is found
  */
 char *_strpbrk(char *s, char *accept)
 {
