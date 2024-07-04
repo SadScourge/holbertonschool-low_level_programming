@@ -4,7 +4,8 @@
  *_strstr - locate a substring
  *@haystack: main string to analyse
  *@needle: the substring to locate
- *Return: a pointer to the beginning of the located substring or NULL if not found
+ *Return: pointer to the beginning of the located substring
+ *or NULL if not found
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -31,6 +32,7 @@ char *_strstr(char *haystack, char *needle)
 			needle++;
 		}
 		needle = needlereset;
+		haystack = start;
 		haystack++;
 	}
 	return (0);
