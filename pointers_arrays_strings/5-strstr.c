@@ -18,18 +18,15 @@ char *_strstr(char *haystack, char *needle)
 	}
 	while (*haystack != '\0')
 	{
-		if (*needle == *haystack)
-		{
-			start = haystack;
-		}
+		start = haystack;
 		while (*needle == *haystack)
 		{
+			haystack++;
+			needle++;
 			if (*needle == '\0')
 			{
 				return (start);
 			}
-			haystack++;
-			needle++;
 		}
 		needle = needlereset;
 		haystack = start;
