@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 {
 	int result = 0;
 	int count = 1;
+	int countchar;
 
 	if (argc < 2)
 	{
@@ -20,10 +21,15 @@ int main(int argc, char **argv)
 	}
 	while (count < argc)
 	{
-		if (atoi(argv[count]) == 0)
+		countchar = 0;
+		while (argv[count][countchar] != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[count][countchar] < '0' || argv[count][countchar] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			countchar++;
 		}
 		result = result + atoi(argv[count]);
 		count++;
