@@ -28,7 +28,10 @@ char *str_concat(char *s1, char *s2)
 		lengths2++;
 	}
 	concat = malloc(sizeof(char) * (lengths1 + lengths2));
-
+	if (concat == NULL)
+	{
+		return (NULL);
+	}
 	for (countc = 0; countc < lengths1; countc++)
 	{
 		concat[countc] = s1[countc];
@@ -37,12 +40,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		concat[countc + counts] = s2[counts];
 	}
-	if (concat[lengths1 + lengths2] == s2[lengths2])
-	{
-		return (concat);
-	}
-	else
-	{
-		return (NULL);
-	}
+	concat[lengths1 + lengths2] = '\0';
+	return (concat);
 }
