@@ -21,13 +21,13 @@ char *_strdup(char *str)
 		length++;
 	}
 	newstr = malloc(length + 1);
+	if (newstr == NULL)
+	{
+	return (NULL);
+	}
 	for (count = 0; count < length; count++)
 	{
 		newstr[count] = str[count];
-	}
-	if (newstr == NULL)
-	{
-		return (NULL);
 	}
 	newstr[count] = '\0';
 	return (newstr);
