@@ -11,8 +11,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int lengths1 = 0;
 	int lengths2 = 0;
-	int counts;
-	int countc;
+	int count;
 	char *concat;
 
 	if (s1 == NULL || s2 == NULL)
@@ -27,18 +26,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		lengths2++;
 	}
-	concat = malloc(sizeof(char) * (lengths1 + lengths2));
+	concat = malloc(lengths1 + lengths2 + 1);
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-	for (countc = 0; countc < lengths1; countc++)
+	for (count = 0; count < lengths1; count++)
 	{
-		concat[countc] = s1[countc];
+		concat[count] = s1[count];
 	}
-	for (counts = 0; counts < lengths2; counts++)
+	for (count = 0; count < lengths2; count++)
 	{
-		concat[countc + counts] = s2[counts];
+		concat[count + lengths1] = s2[count];
 	}
 	concat[lengths1 + lengths2] = '\0';
 	return (concat);
