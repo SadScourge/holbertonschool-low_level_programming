@@ -35,6 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		(*newdog).name[index] = name[index];
 	}
+	(*newdog).age = age;
 	(*newdog).owner = malloc(length2 * sizeof((*newdog).owner));
 	if ((*newdog).owner == NULL)
 	{
@@ -47,6 +48,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		(*newdog).owner[index] = owner[index];
 	}
-	(*newdog).age = age;
 	return (newdog);
 }
