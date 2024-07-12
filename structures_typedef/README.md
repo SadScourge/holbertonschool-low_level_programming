@@ -1,0 +1,1 @@
+This repo contain all my structure/typedef exercises for Holberton School.
