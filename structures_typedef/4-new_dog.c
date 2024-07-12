@@ -47,7 +47,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 /**
  *_strcpy - copy the string in src to dest
  *@src: the original string
- *@dest: the copied string
  *Return: the pointer to dest
  */
 char *_strcpy(char *src)
