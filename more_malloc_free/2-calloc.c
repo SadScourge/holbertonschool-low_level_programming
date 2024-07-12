@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	array = malloc(sizeof(size) * nmemb);
+	array = malloc(size * nmemb);
 	if (array == NULL)
 	{
 		return (NULL);
@@ -25,6 +25,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		array[count] = 0;
 	}
-	array[count] = '\0';
 	return (array);
 }
