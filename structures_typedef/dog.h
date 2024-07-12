@@ -14,7 +14,7 @@ void print_dog(struct dog *d);
  *@owner: owner of the dog
  *Description: this new type will keep information about dogs
 */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
