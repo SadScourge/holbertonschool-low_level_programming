@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "function_pointers.h"
 #include "3-calc.h"
 
 /**
- * 
- * 
- * 
- * 
+ **get_op_func - look if given operator is found
+ *@s: the operator
+ *Return: the correct function associated with the operator
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -23,9 +23,9 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (ops[i].op == *s)
+		if (strcmp(ops[i].op, s) == 0)
 		{
-			return (ops[i].op);
+			return (ops[i].f);
 		}
 		i++;
 	}
