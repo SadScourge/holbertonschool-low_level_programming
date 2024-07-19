@@ -1,0 +1,1 @@
+This repo contain all my variadics functions exercises for Holberton School.
