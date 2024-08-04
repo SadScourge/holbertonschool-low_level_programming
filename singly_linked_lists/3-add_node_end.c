@@ -4,7 +4,7 @@
  * add_node_end - add a node at the end of the list
  * @head: head of the linked list
  * @str: string to put in the node data
- * Return: created node
+ * Return: pointeer to created node or NULL if failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = node;
-		return (0);
+		return (node);
 	}
 	while (current->next != NULL)
 	{
